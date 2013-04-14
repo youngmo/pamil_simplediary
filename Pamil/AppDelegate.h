@@ -1,19 +1,25 @@
 //
 //  AppDelegate.h
-//  Pamil
+//  Simple Diary_
 //
-//  Created by an_yommo on 13/04/14.
-//  Copyright (c) 2013年 an_yommo. All rights reserved.
+//  Created by an_yommo on 13/03/24.
+//  Copyright (c) 2013年 __MyCompanyName__. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@class ViewController;
+@class TableViewController;
+@class DetailViewController;
+@class LoginViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) ViewController *viewController;
+@property (strong, nonatomic) TableViewController *listController;
+
+@property (strong, nonatomic) DetailViewController *detailViewController;
+
+@property (strong, nonatomic) LoginViewController *loginViewController;
 
 @end
