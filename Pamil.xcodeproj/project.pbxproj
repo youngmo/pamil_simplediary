@@ -16,8 +16,13 @@
 		5AE6F458171A59F300CB5630 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AE6F457171A59F300CB5630 /* Default.png */; };
 		5AE6F45A171A59F300CB5630 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AE6F459171A59F300CB5630 /* Default@2x.png */; };
 		5AE6F45C171A59F300CB5630 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AE6F45B171A59F300CB5630 /* Default-568h@2x.png */; };
-		5AE6F45F171A59F300CB5630 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE6F45E171A59F300CB5630 /* ViewController.m */; };
-		5AE6F462171A59F300CB5630 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AE6F460171A59F300CB5630 /* ViewController.xib */; };
+		5AE6F46B171A5A0600CB5630 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE6F469171A5A0600CB5630 /* DetailViewController.m */; };
+		5AE6F46C171A5A0600CB5630 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AE6F46A171A5A0600CB5630 /* DetailViewController.xib */; };
+		5AFA4F06171ABD67002FEB92 /* Day.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFA4F05171ABD67002FEB92 /* Day.m */; };
+		5AFA4F0D171ABDBC002FEB92 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFA4F0B171ABDBC002FEB92 /* TableViewController.m */; };
+		5AFA4F0E171ABDBC002FEB92 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AFA4F0C171ABDBC002FEB92 /* TableViewController.xib */; };
+		5AFA4F12171AC007002FEB92 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFA4F10171AC006002FEB92 /* LoginViewController.m */; };
+		5AFA4F13171AC007002FEB92 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AFA4F11171AC007002FEB92 /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,9 +39,17 @@
 		5AE6F457171A59F300CB5630 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		5AE6F459171A59F300CB5630 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		5AE6F45B171A59F300CB5630 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		5AE6F45D171A59F300CB5630 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5AE6F45E171A59F300CB5630 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		5AE6F461171A59F300CB5630 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		5AE6F468171A5A0600CB5630 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		5AE6F469171A5A0600CB5630 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		5AE6F46A171A5A0600CB5630 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		5AFA4F04171ABD67002FEB92 /* Day.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Day.h; sourceTree = "<group>"; };
+		5AFA4F05171ABD67002FEB92 /* Day.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Day.m; sourceTree = "<group>"; };
+		5AFA4F0A171ABDBC002FEB92 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		5AFA4F0B171ABDBC002FEB92 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		5AFA4F0C171ABDBC002FEB92 /* TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
+		5AFA4F0F171AC006002FEB92 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		5AFA4F10171AC006002FEB92 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		5AFA4F11171AC007002FEB92 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,10 +98,18 @@
 			children = (
 				5AE6F454171A59F300CB5630 /* AppDelegate.h */,
 				5AE6F455171A59F300CB5630 /* AppDelegate.m */,
-				5AE6F45D171A59F300CB5630 /* ViewController.h */,
-				5AE6F45E171A59F300CB5630 /* ViewController.m */,
-				5AE6F460171A59F300CB5630 /* ViewController.xib */,
 				5AE6F44C171A59F300CB5630 /* Supporting Files */,
+				5AE6F468171A5A0600CB5630 /* DetailViewController.h */,
+				5AE6F469171A5A0600CB5630 /* DetailViewController.m */,
+				5AE6F46A171A5A0600CB5630 /* DetailViewController.xib */,
+				5AFA4F04171ABD67002FEB92 /* Day.h */,
+				5AFA4F05171ABD67002FEB92 /* Day.m */,
+				5AFA4F0A171ABDBC002FEB92 /* TableViewController.h */,
+				5AFA4F0B171ABDBC002FEB92 /* TableViewController.m */,
+				5AFA4F0C171ABDBC002FEB92 /* TableViewController.xib */,
+				5AFA4F0F171AC006002FEB92 /* LoginViewController.h */,
+				5AFA4F10171AC006002FEB92 /* LoginViewController.m */,
+				5AFA4F11171AC007002FEB92 /* LoginViewController.xib */,
 			);
 			path = Pamil;
 			sourceTree = "<group>";
@@ -162,7 +183,9 @@
 				5AE6F458171A59F300CB5630 /* Default.png in Resources */,
 				5AE6F45A171A59F300CB5630 /* Default@2x.png in Resources */,
 				5AE6F45C171A59F300CB5630 /* Default-568h@2x.png in Resources */,
-				5AE6F462171A59F300CB5630 /* ViewController.xib in Resources */,
+				5AE6F46C171A5A0600CB5630 /* DetailViewController.xib in Resources */,
+				5AFA4F0E171ABDBC002FEB92 /* TableViewController.xib in Resources */,
+				5AFA4F13171AC007002FEB92 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,7 +198,10 @@
 			files = (
 				5AE6F452171A59F300CB5630 /* main.m in Sources */,
 				5AE6F456171A59F300CB5630 /* AppDelegate.m in Sources */,
-				5AE6F45F171A59F300CB5630 /* ViewController.m in Sources */,
+				5AE6F46B171A5A0600CB5630 /* DetailViewController.m in Sources */,
+				5AFA4F06171ABD67002FEB92 /* Day.m in Sources */,
+				5AFA4F0D171ABDBC002FEB92 /* TableViewController.m in Sources */,
+				5AFA4F12171AC007002FEB92 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,14 +214,6 @@
 				5AE6F44F171A59F300CB5630 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		5AE6F460171A59F300CB5630 /* ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5AE6F461171A59F300CB5630 /* en */,
-			);
-			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -298,6 +316,7 @@
 				5AE6F467171A59F300CB5630 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
