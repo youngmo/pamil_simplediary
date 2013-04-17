@@ -141,4 +141,38 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:@"setContent" object:nil userInfo:notiDic];
 }
 
+#pragma mark - Table view delete row
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewCellEditingStyleDelete;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *item = [diaryData.allKeys objectAtIndex:indexPath.row];
+    [diaryData removeObjectForKey:item];
+    
+    // 파일 저장
+    NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                                 NSUserDomainMask,
+                                                                 YES);
+    
+    NSString *documentRootPath = [documentPaths objectAtIndex:0];
+    
+    NSString *stringFilePath = [documentRootPath stringByAppendingPathComponent:@"simple_diary.plist"];
+    
+    BOOL isWritten = NO;
+    isWritten = [diaryData writeToFile:stringFilePath atomically:YES];
+    
+    // 테이블뷰 갱신
+    //  현재 navigationController에 상위 view를 얻어와서 tableView에 접근
+    [[(UITableViewController *)[self.navigationController topViewController] tableView] reloadData];
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
 @end

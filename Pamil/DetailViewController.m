@@ -35,11 +35,11 @@
     
     //[scrollView becomeFirstResponder];  //키보드 보이게 하기
     
-    // save버튼
-    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"save"
+    // 오른쪽버튼
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"photo"
                                                                     style:UIBarButtonItemStylePlain
                                                                    target:self
-                                                                   action:@selector(saveButtonAction:)];
+                                                                   action:@selector(rightButtonAction:)];
     self.navigationItem.rightBarButtonItem = rightButton;
     
     // back버튼 타이틀 변경을 위해 네비 타이틀을 일시적으로 변경
@@ -56,54 +56,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-# pragma mark - save 버튼
-- (IBAction)saveButtonAction:(id)sender {
-    
-    // 날짜값
-    NSTimeInterval now = time;
-    
-    NSString *nowString = [NSString stringWithFormat:@"%f", now];
-    
-    NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
-                                                                 NSUserDomainMask,
-                                                                 YES);
-    
-    NSString *documentRootPath = [documentPaths objectAtIndex:0];
-    
-    NSString *stringFilePath = [documentRootPath stringByAppendingPathComponent:@"simple_diary.plist"];
-    
-    // 파일 존재여부 확인
-    NSDictionary *diaryDic = nil;
-    NSFileManager* fm = [NSFileManager defaultManager];
-    if ( [fm fileExistsAtPath:stringFilePath] == YES ) {
-        NSMutableDictionary *diaryDic_ = [[NSMutableDictionary alloc] initWithContentsOfFile:stringFilePath];
-        [diaryDic_ setObject:scrollView.text forKey:nowString];
-        diaryDic = diaryDic_;
-    } else {
-        diaryDic = [[NSDictionary alloc] initWithObjectsAndKeys:scrollView.text, nowString, nil];
-    }
-    
-    BOOL isWritten = NO;
-    isWritten = [diaryDic writeToFile:stringFilePath atomically:YES];
-    
-    UIAlertView *alert = nil;
-    
-    if (isWritten) {
-        alert = [[UIAlertView alloc] initWithTitle:@"メッセージ"
-                                           message:@"保存されました"
-                                          delegate:nil
-                                 cancelButtonTitle:@"OK"
-                                 otherButtonTitles:nil];
-    }
-    else {
-        alert = [[UIAlertView alloc] initWithTitle:@"メッセージ"
-                                           message:@"保存に失敗しました"
-                                          delegate:nil
-                                 cancelButtonTitle:@"OK"
-                                 otherButtonTitles:nil];
-    };
-    
-    [alert show];
+# pragma mark - 오른쪽버튼
+- (IBAction)rightButtonAction:(id)sender {
+    NSLog(@"anTest01");
 }
 
 # pragma mark - 키보드
@@ -171,6 +126,33 @@
 
 - (void)viewWillDisappear:(BOOL)animated{
     [self subscribeToKeyboardEvents:NO];
+    
+    // 파일 저장
+    NSTimeInterval now = time;  // 날짜값
+    
+    NSString *nowString = [NSString stringWithFormat:@"%f", now];
+    
+    NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                                 NSUserDomainMask,
+                                                                 YES);
+    
+    NSString *documentRootPath = [documentPaths objectAtIndex:0];
+    
+    NSString *stringFilePath = [documentRootPath stringByAppendingPathComponent:@"simple_diary.plist"];
+    
+    // 파일 존재여부 확인
+    NSDictionary *diaryDic = nil;
+    NSFileManager* fm = [NSFileManager defaultManager];
+    if ( [fm fileExistsAtPath:stringFilePath] == YES ) {
+        NSMutableDictionary *diaryDic_ = [[NSMutableDictionary alloc] initWithContentsOfFile:stringFilePath];
+        [diaryDic_ setObject:scrollView.text forKey:nowString];
+        diaryDic = diaryDic_;
+    } else {
+        diaryDic = [[NSDictionary alloc] initWithObjectsAndKeys:scrollView.text, nowString, nil];
+    }
+    
+    BOOL isWritten = NO;
+    isWritten = [diaryDic writeToFile:stringFilePath atomically:YES];
 }
 
 - (void)viewDidUnload {

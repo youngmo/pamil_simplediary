@@ -75,7 +75,6 @@
 
 - (IBAction)inputPwd4:(id)sender {
     if (pwdText4.text.length == 1) {
-        NSLog(@"anTest01");
         
         NSMutableString *pwd = [NSMutableString string];
         [pwd appendString:pwdText1.text];
@@ -103,10 +102,8 @@
     int maxLength = 0;
     
     if (string && string.length && textField.text.length > maxLength) {
-        NSLog(@"anTest22");
         return NO;
     }
-    NSLog(@"anTest11");
     return YES;
 }
 

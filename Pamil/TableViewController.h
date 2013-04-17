@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TableViewController : UITableViewController {
-    NSDictionary *diaryData;
+@interface TableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource> {
+    NSMutableDictionary *diaryData;
 }
 
 @end
