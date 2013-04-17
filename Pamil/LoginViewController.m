@@ -15,7 +15,10 @@
 
 @implementation LoginViewController
 
-@synthesize pwdText;
+@synthesize pwdText1;
+@synthesize pwdText2;
+@synthesize pwdText3;
+@synthesize pwdText4;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,8 +32,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [pwdText becomeFirstResponder];
-    [pwdText setDelegate:self];
+    [pwdText1 becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,34 +41,73 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    int maxLength = 3;
-    
-    if (string && string.length && textField.text.length > maxLength) {
-        return NO;
+#pragma mark - keyboard event
+
+- (IBAction)inputPwd1:(id)sender {
+    if (pwdText1.text.length == 1) {
+        [pwdText2 becomeFirstResponder];
     }
-    return YES;
+    
+    if (pwdText1.text.length == 0) {
+        [pwdText1 becomeFirstResponder];
+    }
 }
 
-- (IBAction)inputPwd:(id)sender {
-    //NSLog(@"anTest01");
-    if (3 < pwdText.text.length) {
-        if ([pwdText.text isEqualToString: @"1111"]) {
-            
+- (IBAction)inputPwd2:(id)sender {
+    if (pwdText2.text.length == 1) {
+        [pwdText3 becomeFirstResponder];
+    }
+    
+    if (pwdText2.text.length == 0) {
+        [pwdText1 becomeFirstResponder];
+    }
+}
+
+- (IBAction)inputPwd3:(id)sender {
+    if (pwdText3.text.length == 1) {
+        [pwdText4 becomeFirstResponder];
+    }
+    
+    if (pwdText3.text.length == 0) {
+        [pwdText2 becomeFirstResponder];
+    }
+}
+
+- (IBAction)inputPwd4:(id)sender {
+    if (pwdText4.text.length == 1) {
+        NSLog(@"anTest01");
+        
+        NSMutableString *pwd = [NSMutableString string];
+        [pwd appendString:pwdText1.text];
+        [pwd appendString:pwdText2.text];
+        [pwd appendString:pwdText3.text];
+        [pwd appendString:pwdText4.text];
+        
+        if ([pwd isEqualToString: @"1111"]) {
+                
             TableViewController *listController = [[TableViewController alloc] initWithStyle:UITableViewStylePlain];
             UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:listController];
-            
+                
             [self presentViewController:navi animated:YES completion:nil];
         }
     }
+    
+    if (pwdText4.text.length == 0) {
+        [pwdText3 becomeFirstResponder];
+    }
 }
 
-- (IBAction)pushButton:(id)sender {
-    TableViewController *listController = [[TableViewController alloc] initWithStyle:UITableViewStylePlain];
-    UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:listController];
+#pragma mark - UITextField Delegate
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     
-    [self presentViewController:navi animated:YES completion:nil];
-    //[self.view insertSubview:navi.view atIndex:0];
-    //[self.view addSubview:navi];
+    int maxLength = 0;
+    
+    if (string && string.length && textField.text.length > maxLength) {
+        NSLog(@"anTest22");
+        return NO;
+    }
+    NSLog(@"anTest11");
+    return YES;
 }
+
 @end

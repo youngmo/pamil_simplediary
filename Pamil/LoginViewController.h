@@ -8,13 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginViewController : UIViewController <UITextFieldDelegate> {
-    
-}
+@interface LoginViewController : UIViewController <UITextFieldDelegate>
 
-@property (strong, nonatomic) IBOutlet UITextField *pwdText;
+@property (strong, nonatomic) IBOutlet UITextField *pwdText1;
+@property (strong, nonatomic) IBOutlet UITextField *pwdText2;
+@property (strong, nonatomic) IBOutlet UITextField *pwdText3;
+@property (strong, nonatomic) IBOutlet UITextField *pwdText4;
 
-- (IBAction)inputPwd:(id)sender;
-- (IBAction)pushButton:(id)sender;
+- (IBAction)inputPwd1:(id)sender;
+- (IBAction)inputPwd2:(id)sender;
+- (IBAction)inputPwd3:(id)sender;
+- (IBAction)inputPwd4:(id)sender;
 
 @end
