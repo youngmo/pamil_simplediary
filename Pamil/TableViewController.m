@@ -8,6 +8,7 @@
 
 #import "TableViewController.h"
 #import "DetailViewController.h"
+#import "SettingViewController.h"
 #import "Day.h"
 
 @interface TableViewController ()
@@ -40,7 +41,7 @@
     
     // 설정버튼
     UIBarButtonItem *settingButton = [[UIBarButtonItem alloc] initWithTitle:@"Setting"
-                                                                      style:UIBarButtonItemStyleDone
+                                                                      style:nil
                                                                      target:self
                                                                      action:@selector(setting:)];
     self.navigationItem.leftBarButtonItem = settingButton;
@@ -134,6 +135,13 @@
     // 노티피케이션 호출(트리거)
     NSDictionary *notiDic = [[NSDictionary alloc] initWithObjectsAndKeys:day,@"content", nil];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"setContent" object:nil userInfo:notiDic];
+}
+
+#pragma mark - @selector
+
+- (IBAction) setting:(id)sender {
+    SettingViewController *settingViewController = [[SettingViewController alloc] init];
+    [self.navigationController pushViewController:settingViewController animated:YES];
 }
 
 - (IBAction) writeDiary:(id)sender {
