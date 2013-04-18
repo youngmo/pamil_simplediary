@@ -40,7 +40,7 @@
                                                                     style:UIBarButtonItemStylePlain
                                                                    target:self
                                                                    action:@selector(rightButtonAction:)];
-    self.navigationItem.rightBarButtonItem = rightButton;
+    //self.navigationItem.rightBarButtonItem = rightButton;
     
     // back버튼 타이틀 변경을 위해 네비 타이틀을 일시적으로 변경
     self.navigationController.navigationBar.topItem.title = @"List";

@@ -11,6 +11,7 @@
 @class TableViewController;
 @class DetailViewController;
 @class LoginViewController;
+@class PwdViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -21,5 +22,7 @@
 @property (strong, nonatomic) DetailViewController *detailViewController;
 
 @property (strong, nonatomic) LoginViewController *loginViewController;
+
+@property (strong, nonatomic) PwdViewController *pwdViewController;
 
 @end

@@ -102,6 +102,16 @@
     int maxLength = 0;
     
     if (string && string.length && textField.text.length > maxLength) {
+        if (textField == pwdText1) {
+            [pwdText2 becomeFirstResponder];
+            return YES;
+        } else if (textField == pwdText2) {
+            [pwdText3 becomeFirstResponder];
+            return YES;
+        } else if (textField == pwdText3) {
+            [pwdText4 becomeFirstResponder];
+            return YES;
+        }
         return NO;
     }
     return YES;

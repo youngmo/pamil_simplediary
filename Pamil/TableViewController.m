@@ -31,11 +31,19 @@
     
     //self.clearsSelectionOnViewWillAppear = NO;
     
-    UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+    // 저장버튼 
+    UIBarButtonItem *newButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
                                                                                 target:self
                                                                                 action:@selector(writeDiary:)];
-    self.navigationItem.rightBarButtonItem = saveButton;
+    self.navigationItem.rightBarButtonItem = newButton;
     //self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    // 설정버튼
+    UIBarButtonItem *settingButton = [[UIBarButtonItem alloc] initWithTitle:@"Setting"
+                                                                      style:UIBarButtonItemStyleDone
+                                                                     target:self
+                                                                     action:@selector(setting:)];
+    self.navigationItem.leftBarButtonItem = settingButton;
     
     [self loadDiaryDic];
 }

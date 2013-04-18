@@ -11,6 +11,7 @@
 #import "TableViewController.h"
 #import "DetailViewController.h"
 #import "LoginViewController.h"
+#import "PwdViewController.h"
 
 @implementation AppDelegate
 
@@ -24,6 +25,8 @@
     
     self.loginViewController = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
     
+    self.pwdViewController = [[PwdViewController alloc] initWithNibName:@"PwdViewController" bundle:nil];
+    
     /*
     self.detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
     self.listController = [[TableViewController alloc] initWithStyle:UITableViewStylePlain];
@@ -31,7 +34,8 @@
     */
     
     //self.window.rootViewController = navi;
-    self.window.rootViewController = self.loginViewController;
+    //self.window.rootViewController = self.loginViewController;
+    self.window.rootViewController = self.pwdViewController;
     
     [self.window makeKeyAndVisible];
     return YES;
