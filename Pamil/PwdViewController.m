@@ -25,7 +25,18 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        // 사전읽기
+        NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                                     NSUserDomainMask,
+                                                                     YES);
+        
+        NSString *documentRootPath = [documentPaths objectAtIndex:0];
+        
+        NSString *stringFilePath = [documentRootPath stringByAppendingFormat:@"/simple_diary_setting.plist"];
+        
+        NSMutableDictionary *diaryDic = [[NSMutableDictionary alloc] initWithContentsOfFile:stringFilePath];
+        
+        pwd = [diaryDic valueForKey:@"password"];
     }
     return self;
 }
@@ -72,12 +83,19 @@
         pwdText3.text = @"*";
         pwdText4.text = @"*";
         
-        if ([pwdHide.text isEqualToString: @"1111"]) {
+        if ([pwdHide.text isEqualToString:pwd]) {
             
             TableViewController *listController = [[TableViewController alloc] initWithStyle:UITableViewStylePlain];
             UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:listController];
             
             [self presentViewController:navi animated:YES completion:nil];
+        
+        } else {
+            pwdHide.text = @"";
+            pwdText1.text = @".";
+            pwdText2.text = @".";
+            pwdText3.text = @".";
+            pwdText4.text = @".";
         }
     }
 }

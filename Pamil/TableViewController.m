@@ -141,7 +141,7 @@
 
 - (IBAction) setting:(id)sender {
     SettingViewController *settingViewController = [[SettingViewController alloc] init];
-    [self.navigationController pushViewController:settingViewController animated:YES];
+    [self.navigationController pushViewController:settingViewController animated:NO];
 }
 
 - (IBAction) writeDiary:(id)sender {

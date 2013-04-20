@@ -197,6 +197,10 @@
     
     self.navigationItem.title = title;
     [scrollView setText:content.content];
+    
+    if (scrollView.text.length == 0) {
+        [scrollView becomeFirstResponder];
+    }
 }
 
 @end

@@ -27,16 +27,27 @@
     
     self.pwdViewController = [[PwdViewController alloc] initWithNibName:@"PwdViewController" bundle:nil];
     
-    /*
-    self.detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
-    self.listController = [[TableViewController alloc] initWithStyle:UITableViewStylePlain];
-    UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:self.listController];
-    */
+    // 사전읽기
+    NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                                 NSUserDomainMask,
+                                                                 YES);
     
-    //self.window.rootViewController = navi;
-    //self.window.rootViewController = self.loginViewController;
-    self.window.rootViewController = self.pwdViewController;
+    NSString *documentRootPath = [documentPaths objectAtIndex:0];
     
+    NSString *stringFilePath = [documentRootPath stringByAppendingFormat:@"/simple_diary_setting.plist"];
+    
+    // 파일 존재여부 확인
+    NSFileManager* fm = [NSFileManager defaultManager];
+    if ( [fm fileExistsAtPath:stringFilePath] == YES ) {
+        self.window.rootViewController = self.pwdViewController;
+        
+    } else {
+        TableViewController *listController = [[TableViewController alloc] initWithStyle:UITableViewStylePlain];
+        UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:listController];
+        
+        self.window.rootViewController = navi;
+    }
+
     [self.window makeKeyAndVisible];
     return YES;
 }

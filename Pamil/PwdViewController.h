@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PwdViewController : UIViewController <UITextFieldDelegate>
+@interface PwdViewController : UIViewController <UITextFieldDelegate> {
+    NSString *pwd;
+}
 
 @property (strong, nonatomic) IBOutlet UILabel *pwdText1;
 @property (strong, nonatomic) IBOutlet UILabel *pwdText2;
