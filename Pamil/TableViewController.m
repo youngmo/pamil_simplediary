@@ -33,7 +33,7 @@
     //self.clearsSelectionOnViewWillAppear = NO;
     
     // 저장버튼 
-    UIBarButtonItem *newButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+    UIBarButtonItem *newButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose
                                                                                 target:self
                                                                                 action:@selector(writeDiary:)];
     self.navigationItem.rightBarButtonItem = newButton;
@@ -41,7 +41,7 @@
     
     // 설정버튼
     UIBarButtonItem *settingButton = [[UIBarButtonItem alloc] initWithTitle:@"Setting"
-                                                                      style:nil
+                                                                      style:UIBarButtonItemStylePlain
                                                                      target:self
                                                                      action:@selector(setting:)];
     self.navigationItem.leftBarButtonItem = settingButton;

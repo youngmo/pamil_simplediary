@@ -78,7 +78,7 @@
 
 # pragma mark - 캔슬 버튼
 - (IBAction)cancelSetting:(id)sender {
-    [self.navigationController popViewControllerAnimated:NO];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 # pragma mark - 입력 모드 변경

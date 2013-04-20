@@ -39,15 +39,24 @@
     
     //[scrollView becomeFirstResponder];  //키보드 보이게 하기
     
-    // 오른쪽버튼
-    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"photo"
-                                                                    style:UIBarButtonItemStylePlain
-                                                                   target:self
-                                                                   action:@selector(photoButtonAction:)];
-    self.navigationItem.rightBarButtonItem = rightButton;
-    
     // back버튼 타이틀 변경을 위해 네비 타이틀을 일시적으로 변경
     self.navigationController.navigationBar.topItem.title = @"List";
+    
+    // 오른쪽버튼
+    UIBarButtonItem *photoButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera
+                                                                                 target:self
+                                                                                 action:@selector(photoButtonAction:)];
+    //self.navigationItem.rightBarButtonItem = photoButton;
+    
+    // 오른쪽버튼
+    UIBarButtonItem *deleteButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
+                                                                                  target:self
+                                                                                  action:@selector(deleteButtonAction:)];
+    
+    NSMutableArray *rightButtonList = [[NSMutableArray alloc] init];
+    [rightButtonList addObject:photoButton];
+    [rightButtonList addObject:deleteButton];
+    self.navigationItem.rightBarButtonItems = rightButtonList;
     
     // 노티피케이션 등록
     NSNotificationCenter *notiCenter = [NSNotificationCenter defaultCenter];
@@ -62,13 +71,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+# pragma mark - 사진삭제버튼
+- (IBAction)deleteButtonAction:(id)sender {
+    
+    [imageList removeAllObjects];
+    [imagePathList removeAllObjects];
+    
+    [_collectionView reloadData];
+    inputPhoto = false;
+}
+
 # pragma mark - 뒤로가기버튼
 - (IBAction)backButtonAction:(id)sender {
-    NSLog(@"11111111");
     [self.navigationController popViewControllerAnimated:YES]; 
 }
 
-# pragma mark - 오른쪽버튼
+# pragma mark - 사진추가버튼
 - (IBAction)photoButtonAction:(id)sender {
     
     if (imageList.count == 3) {
@@ -155,27 +173,27 @@
 }
 
 - (void)didPresentActionSheet:(UIActionSheet *)actionSheet {
-    NSLog(@"didPresentActionSheet");
+    //NSLog(@"didPresentActionSheet");
 }
 
 - (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    NSLog(@"didShowViewController");
+    //NSLog(@"didShowViewController");
 }
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    NSLog(@"willShowViewController");
+    //NSLog(@"willShowViewController");
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    NSLog(@"viewWillAppear");
+    //NSLog(@"viewWillAppear");
 }
 
 - (void)viewWillLayoutSubviews {
-    NSLog(@"viewWillLayoutSubviews");
+    //NSLog(@"viewWillLayoutSubviews");
 }
 
 - (void)viewDidLayoutSubviews {
-    NSLog(@"viewDidLayoutSubviews");
+    //NSLog(@"viewDidLayoutSubviews");
     
     // 사진 콜렉션 표시가 안되어 있을 때
     if (inputPhoto == true) {
@@ -184,11 +202,13 @@
         newFrame_.origin.y = 100;
         newFrame_.size.height -= 100;
         [scrollView setFrame:newFrame_];
+    } else {
+        _collectionView.hidden = YES;
     }
 }
 
 - (void)willMoveToParentViewController:(UIViewController *)parent {
-    NSLog(@"willMoveToParentViewController");
+    //NSLog(@"willMoveToParentViewController");
     
     // 부모화면으로 돌아갈 때만 실행
     if (scrollView != nil) {
@@ -236,16 +256,16 @@
 }
 
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-    NSLog(@"willRotateToInterfaceOrientation");
+    //NSLog(@"willRotateToInterfaceOrientation");
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    NSLog(@"viewWillDisappear");
+    //NSLog(@"viewWillDisappear");
     [self subscribeToKeyboardEvents:NO];
 }
 
 - (void)viewDidUnload {
-    NSLog(@"viewDidUnload");
+    //NSLog(@"viewDidUnload");
     
     [self setScrollView:nil];
     [super viewDidUnload];
