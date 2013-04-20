@@ -49,10 +49,6 @@
     // back버튼 타이틀 변경을 위해 네비 타이틀을 일시적으로 변경
     self.navigationController.navigationBar.topItem.title = @"List";
     
-    UIBarButtonItemStyle backStyle = self.navigationItem.leftBarButtonItem.style;
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"List" style:backStyle target:self action:@selector(backButtonAction:)];
-    //self.navigationItem.leftBarButtonItem = backButton;
-    
     // 노티피케이션 등록
     NSNotificationCenter *notiCenter = [NSNotificationCenter defaultCenter];
     [notiCenter addObserver:self selector:@selector(setContentWithNoti:) name:@"setContent" object:nil];

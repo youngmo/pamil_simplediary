@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A76448A172055370055BCAA /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A764488172055370055BCAA /* SettingViewController.m */; };
+		5A76448B172055370055BCAA /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A764489172055370055BCAA /* SettingViewController.xib */; };
+		5A76448E17228C6A0055BCAA /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A76448D17228C690055BCAA /* PhotoCell.m */; };
+		5A7644901722C5D90055BCAA /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A76448F1722C5D90055BCAA /* AssetsLibrary.framework */; };
+		5A9E4F9E171DB4480003EDCA /* 599624_606695926025356_1480828407_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A9E4F9D171DB4480003EDCA /* 599624_606695926025356_1480828407_n.png */; };
+		5A9E4FA2171DB46F0003EDCA /* 599624_606695926025356_1480828407_m.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A9E4FA1171DB46F0003EDCA /* 599624_606695926025356_1480828407_m.png */; };
+		5A9E4FDB17204C6C0003EDCA /* PwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E4FD917204C6B0003EDCA /* PwdViewController.m */; };
+		5A9E4FDC17204C6C0003EDCA /* PwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A9E4FDA17204C6B0003EDCA /* PwdViewController.xib */; };
 		5AE6F446171A59F300CB5630 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE6F445171A59F300CB5630 /* UIKit.framework */; };
 		5AE6F448171A59F300CB5630 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE6F447171A59F300CB5630 /* Foundation.framework */; };
 		5AE6F44A171A59F300CB5630 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE6F449171A59F300CB5630 /* CoreGraphics.framework */; };
@@ -26,7 +34,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5AE6F442171A59F300CB5630 /* Pamil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pamil.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A764487172055370055BCAA /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		5A764488172055370055BCAA /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		5A764489172055370055BCAA /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		5A76448C17228C690055BCAA /* PhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCell.h; sourceTree = "<group>"; };
+		5A76448D17228C690055BCAA /* PhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCell.m; sourceTree = "<group>"; };
+		5A76448F1722C5D90055BCAA /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		5A9E4F9D171DB4480003EDCA /* 599624_606695926025356_1480828407_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 599624_606695926025356_1480828407_n.png; sourceTree = "<group>"; };
+		5A9E4FA1171DB46F0003EDCA /* 599624_606695926025356_1480828407_m.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 599624_606695926025356_1480828407_m.png; sourceTree = "<group>"; };
+		5A9E4FD817204C6A0003EDCA /* PwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PwdViewController.h; sourceTree = "<group>"; };
+		5A9E4FD917204C6B0003EDCA /* PwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PwdViewController.m; sourceTree = "<group>"; };
+		5A9E4FDA17204C6B0003EDCA /* PwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PwdViewController.xib; sourceTree = "<group>"; };
+		5AE6F442171A59F300CB5630 /* Pamil Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pamil Diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE6F445171A59F300CB5630 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5AE6F447171A59F300CB5630 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5AE6F449171A59F300CB5630 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -57,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A7644901722C5D90055BCAA /* AssetsLibrary.framework in Frameworks */,
 				5AE6F446171A59F300CB5630 /* UIKit.framework in Frameworks */,
 				5AE6F448171A59F300CB5630 /* Foundation.framework in Frameworks */,
 				5AE6F44A171A59F300CB5630 /* CoreGraphics.framework in Frameworks */,
@@ -69,6 +89,9 @@
 		5AE6F439171A59F300CB5630 = {
 			isa = PBXGroup;
 			children = (
+				5A76448F1722C5D90055BCAA /* AssetsLibrary.framework */,
+				5A9E4FA1171DB46F0003EDCA /* 599624_606695926025356_1480828407_m.png */,
+				5A9E4F9D171DB4480003EDCA /* 599624_606695926025356_1480828407_n.png */,
 				5AE6F44B171A59F300CB5630 /* Pamil */,
 				5AE6F444171A59F300CB5630 /* Frameworks */,
 				5AE6F443171A59F300CB5630 /* Products */,
@@ -78,7 +101,7 @@
 		5AE6F443171A59F300CB5630 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5AE6F442171A59F300CB5630 /* Pamil.app */,
+				5AE6F442171A59F300CB5630 /* Pamil Diary.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,6 +133,14 @@
 				5AFA4F0F171AC006002FEB92 /* LoginViewController.h */,
 				5AFA4F10171AC006002FEB92 /* LoginViewController.m */,
 				5AFA4F11171AC007002FEB92 /* LoginViewController.xib */,
+				5A9E4FD817204C6A0003EDCA /* PwdViewController.h */,
+				5A9E4FD917204C6B0003EDCA /* PwdViewController.m */,
+				5A9E4FDA17204C6B0003EDCA /* PwdViewController.xib */,
+				5A764487172055370055BCAA /* SettingViewController.h */,
+				5A764488172055370055BCAA /* SettingViewController.m */,
+				5A764489172055370055BCAA /* SettingViewController.xib */,
+				5A76448C17228C690055BCAA /* PhotoCell.h */,
+				5A76448D17228C690055BCAA /* PhotoCell.m */,
 			);
 			path = Pamil;
 			sourceTree = "<group>";
@@ -145,7 +176,7 @@
 			);
 			name = Pamil;
 			productName = Pamil;
-			productReference = 5AE6F442171A59F300CB5630 /* Pamil.app */;
+			productReference = 5AE6F442171A59F300CB5630 /* Pamil Diary.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -186,6 +217,10 @@
 				5AE6F46C171A5A0600CB5630 /* DetailViewController.xib in Resources */,
 				5AFA4F0E171ABDBC002FEB92 /* TableViewController.xib in Resources */,
 				5AFA4F13171AC007002FEB92 /* LoginViewController.xib in Resources */,
+				5A9E4F9E171DB4480003EDCA /* 599624_606695926025356_1480828407_n.png in Resources */,
+				5A9E4FA2171DB46F0003EDCA /* 599624_606695926025356_1480828407_m.png in Resources */,
+				5A9E4FDC17204C6C0003EDCA /* PwdViewController.xib in Resources */,
+				5A76448B172055370055BCAA /* SettingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +237,9 @@
 				5AFA4F06171ABD67002FEB92 /* Day.m in Sources */,
 				5AFA4F0D171ABDBC002FEB92 /* TableViewController.m in Sources */,
 				5AFA4F12171AC007002FEB92 /* LoginViewController.m in Sources */,
+				5A9E4FDB17204C6C0003EDCA /* PwdViewController.m in Sources */,
+				5A76448A172055370055BCAA /* SettingViewController.m in Sources */,
+				5A76448E17228C6A0055BCAA /* PhotoCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +319,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pamil/Pamil-Prefix.pch";
 				INFOPLIST_FILE = "Pamil/Pamil-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Pamil Diary";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -292,7 +330,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pamil/Pamil-Prefix.pch";
 				INFOPLIST_FILE = "Pamil/Pamil-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Pamil Diary";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
